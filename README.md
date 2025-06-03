@@ -26,7 +26,7 @@ Q-Learning is a model-free, value-based, off-policy algortihm that will find the
 in contrast to the model-based algorithm, model-free algorthim learns the consequences of their actions through the experience. 
 
 ### RL Algorithm
-<div style="text-align:center"><img src="https://github.com/zF-9/qLearning-RL/blob/b376184624fcb448305434cfb8b87485ad5216f6/img/qLearning-pokemon.png"></div>
+<p style="align:center"><img src="https://github.com/zF-9/qLearning-RL/blob/b376184624fcb448305434cfb8b87485ad5216f6/img/qLearning-pokemon.png"></p>
  
 ## terminology in Q-Learning ##
 1. Environment : the world or the system in which the agent interact.
@@ -41,6 +41,7 @@ in contrast to the model-based algorithm, model-free algorthim learns the conseq
 ### Demo ###
 **simulation #1**
  <img src="https://github.com/zF-9/qLearning-RL/blob/b376184624fcb448305434cfb8b87485ad5216f6/img/RL-ML-QL.gif"> 
+ 
 **simulation #2**
 <img src="https://github.com/zF-9/qLearning-RL/blob/b376184624fcb448305434cfb8b87485ad5216f6/img/RL-Q.gif">
 
@@ -48,7 +49,7 @@ in contrast to the model-based algorithm, model-free algorthim learns the conseq
   ```
     - Adjusting the model hyperparameters (number of episodes; learning rate; evaluation seed of the environment; epsilon probabilty; decay rate).
     - Visualing the Exploration-Exploitation Trade-off.
-    - experimenting with website navigation using Q-Learning.
+    - experimenting with automating website navigation using Q-Learning.
   ```
 
 
