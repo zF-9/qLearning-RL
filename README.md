@@ -1,4 +1,4 @@
-# qLearning-RL
+# Q-Learning : Reinforcement Learning (ML)
 visualization and simulation of reinforcement learning algorithm with Python.
 
 ## Reinforcement Learning ##
@@ -26,8 +26,8 @@ Q-Learning is a model-free, value-based, off-policy algortihm that will find the
 in contrast to the model-based algorithm, model-free algorthim learns the consequences of their actions through the experience. 
 
 ### RL Algorithm
- <img src="https://github.com/zF-9/PythonFileRename/blob/ae10357ed56ebfe02b4a9ab26ba11afa01ffb9b0/orig_images/PythonRenamer.gif">
-
+<p style="align:center"><img src="https://github.com/zF-9/qLearning-RL/blob/b376184624fcb448305434cfb8b87485ad5216f6/img/qLearning-pokemon.png"></p>
+ 
 ## terminology in Q-Learning ##
 1. Environment : the world or the system in which the agent interact.
 2. Agent : the protagonist of the environement. 
@@ -39,13 +39,17 @@ in contrast to the model-based algorithm, model-free algorthim learns the conseq
 8. Temporal Difference : use to estimate the expected value (optimal Q-value) by using the current state & action and comparing it to the previous state & actions.  
 
 ### Demo ###
- <img src="https://github.com/zF-9/PythonFileRename/blob/ae10357ed56ebfe02b4a9ab26ba11afa01ffb9b0/orig_images/PythonRenamer.gif">
+**simulation #1**
+ <img src="https://github.com/zF-9/qLearning-RL/blob/b376184624fcb448305434cfb8b87485ad5216f6/img/RL-ML-QL.gif"> 
+ 
+**simulation #2**
+<img src="https://github.com/zF-9/qLearning-RL/blob/b376184624fcb448305434cfb8b87485ad5216f6/img/RL-Q.gif">
 
   ### Prospect
   ```
     - Adjusting the model hyperparameters (number of episodes; learning rate; evaluation seed of the environment; epsilon probabilty; decay rate).
     - Visualing the Exploration-Exploitation Trade-off.
-    - experimenting with website navigation using Q-Learning.
+    - experimenting with automating website navigation using Q-Learning.
   ```
 
 
