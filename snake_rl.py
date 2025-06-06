@@ -1,12 +1,15 @@
 import os
 import csv
 import pygame
+import openpyxl
 import numpy as np
 import random
 from collections import deque
 import collections
 
-file_path = r"C:\Users\Fauzi\Desktop\RL_qLearning\output_result.csv" 
+file_path = r"C:\Users\Fauzi\Desktop\RL_qLearning\0ld_output_result.csv" 
+#wb = openpyxl.load_workbook('output_result.xlsx')
+#ws = wb.active
 
 # Constants for the game
 GRID_SIZE = 20
@@ -137,7 +140,7 @@ class QLearningAgent:
 def main():
     game = SnakeGame()
     agent = QLearningAgent(state_space=None, action_space=3)  # 3 actions: Continue, Left, Right
-    episodes = 100000
+    episodes = 10000
 
     for episode in range(episodes):
         state = game.reset()
@@ -156,13 +159,24 @@ def main():
             total_reward += reward
             game.render()
 
-        with open(file_path, 'w', newline='') as file:
+        with open(file_path, 'a', newline='') as file:
             raw_data = f"Episode: {episode + 1}/{episodes}, Score: {game.score}, Total Reward: {total_reward}, Epsilon: {agent.epsilon:.3f}"
-            epi_data = [f"Episode: {episode + 1}/{episodes}", f"Score: {game.score}", f"Total Reward: {total_reward}", f"Epsilon: {agent.epsilon:.3f}" ]
+            #epi_data = [f"Episode: {episode + 1}/{episodes}"], [f"Score: {game.score}", f"Total Reward: {total_reward}"], [f"Epsilon: {agent.epsilon:.3f}" ]
 
-            print(epi_data)
+            print(raw_data)
 
-            file.write(str(raw_data))
+            #file.write(str(epi_data))
+            #file.close()
+
+            epis = f"{episode + 1}/{episodes}"
+            score = f"{game.score}"
+            total_r = f"{total_reward}"
+            Epsilon = f"{agent.epsilon:3f}"
+
+            writer = csv.writer(file)
+            rows = [epis, score, total_r, Epsilon]
+            writer.writerow(rows)
+                
             file.close()
 
     pygame.quit()
